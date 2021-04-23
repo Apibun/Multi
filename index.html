@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Let's Start
+    </title>
+    <style>
+      body{
+        background:#f1f6ff;
+        margin:1rem;
+        text-align:center;
+        font-family:sans-serif;
+      }
+      svg{
+        background:white;
+        box-shadow:0 0 20px #0001;
+        width:80%;
+      }
+    </style>
+  </head>
+  <body>
+    <svg viewBox="0 0 100 100">
+      <!--       สร้าง pattern -->
+      <defs>
+        <filter id="shadow">
+        <feOffset result="offOut" in="SourceGraphic" dx=".1" dy=".3"/>
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation=".25"/>
+        </filter>
+        <pattern id="space" viewBox="0,0,20,20" width="10%" height="10%">
+          <rect width="20" height="20" fill="#000">
+          </rect>
+			<polygon fill="#fff"
+                  points="10,10
+                          11,11
+                          12,11
+                          11.5,12
+                          12,13
+                          10,12.5
+                          8,13
+                          8.5,12
+                          8,11
+                          9,11"/>
+        <circle r=".7" cx="0" cy="0" style="fill:#fff; filter:url(#shadow);">
+            <animate attributeName="opacity"
+             values="0;1;0" dur="2s"
+             repeatCount="indefinite"/>
+        </circle>
+        <circle r=".7" cx="20" cy="0" style="fill:#fff; filter:url(#shadow);">
+            <animate attributeName="opacity"
+             values="0;1;0" dur="2s"
+             repeatCount="indefinite"/>
+        </circle>
+        <circle r=".7" cx="0" cy="20" style="fill:#fff; filter:url(#shadow);">
+            <animate attributeName="opacity"
+             values="0;1;0" dur="2s"
+             repeatCount="indefinite"/>        
+        </circle>
+        <circle r=".7" cx="20" cy="20" style="fill:#fff; filter:url(#shadow);">
+            <animate attributeName="opacity"
+             values="0;1;0" dur="2s"
+             repeatCount="indefinite"/>
+        </circle>
+        </pattern>
+        <pattern id="ring" viewBox="0,0,20,20," width="10%" height="10%">
+          <rect width="15" height="15" fill="#FBC02D">
+          </rect>
+          <circle r="1" cx="1" cy="1" fill="#00838F"/>
+          <circle r=".5" cx="4.5" cy="3" fill="#c62828"/>
+        </pattern>
+        <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+          <rect width="6" height="7"></rect>
+          <circle/>
+        </pattern>
+        <pattern id="ring2" viewBox="0,0,10,10," width="10%" height="10%">
+          <rect width="8" height="8" fill="#F3D359"></rect>
+          <ellipse cx="2" cy="2" rx=".7" ry=".4" fill="#3F51B5"/>
+          <ellipse cx="1" cy="5.5" rx=".4" ry=".7" fill="#AB47BC"/>
+        </pattern>
+        <pattern id="star2" viewBox="0,0,20,20" width="10%" height="10%">
+          <rect width="20" height="20" fill="#B3E5FC"></rect>
+        	 <path fill="transparent" stroke="#1565C0" stroke-width="2.5" stroke-linecap="round" 
+                d="m1,3
+                   q3.5,3.5,7 0">
+        <animateTransform attributeName="transform"
+                          type="translate"
+                          from="0 0"
+                          to="3 0"
+                          dur="1.5s"
+                          repeatCount="indefinite"/>
+          </path>
+        	 <path fill="transparent" stroke="#1565C0" stroke-width="2.5" stroke-linecap="round" 
+                d="m8,3
+                   q3.5,3.5,7 0">
+        <animateTransform attributeName="transform"
+                          type="translate"
+                          from="0 0"
+                          to="3 0"
+                          dur="1.5s"
+                          repeatCount="indefinite"/>
+          </path>
+        </pattern>
+        
+      </defs>
+      <!--       ใช้ pattern -->
+      <rect width="100" height="100" fill="url(#space)"/>
+      <circle r="40" cx="-10" cy="50"fill="#FFF176"/>
+      <path fill="transparent" stroke="url(#ring)" stroke-width="4.5" stroke-linecap="round"
+            d="m0,0
+               c70 15,65 55,50 75.8"/>
+      <path fill="transparent" stroke="url(#ring)" stroke-width="4.5" stroke-linecap="round"
+            d="m49.8,76
+               c0 0,-7.8 15,-55 40"/>
+      <circle r="20" cx="100" cy="50" fill="url(#star2)"/>
+      <path fill="transparent" stroke="url(#ring2)" stroke-width="3" stroke-linecap="round"
+            d="m0,6.5
+               c0 0,75 20,40 66"/>
+      <path fill="transparent" stroke="url(#ring2)" stroke-width="3" stroke-linecap="round"
+            d="m40.4,71.5
+               c0 0,0 6,-42 31"/>
+      
+    </svg>
+  </body>
+</html>
